@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Password Manager v0.1</title>
+	<style>
+		body {
+			background-color: #FFFFFF;
+			padding: 0px;
+			margin: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<div style='border: 1px grey solid; border-radius: 2px; width: 180px; padding: 10px; margin-top: 5px; margin-left: 5px;'>
+			<form method='post'>
+				<h3 style='margin: 0px;'>Create New Key</h3><br />
+				
+				Password:<br />
+				<input type='password' name='password'><br />
+				
+				Filename:<br />
+				<input type='text' name='output_name'>
+				<input type='hidden' name='new_pass'>
+				<input type='submit' value='Request New Pass' name='submit1'>
+
+			</form>
+		</div>
+
+		<div style='border: 1px grey solid; border-radius: 2px; width: 180px; padding: 10px; margin-top: 5px; margin-left: 5px'>
+			<h3 style='margin: 0px;'>Request Existing Password</h3><br />
+			<form method="post" enctype="multipart/form-data">
+				Password:<br />
+				<input type='password' name='password'><br />
+				<input type="file" name="private_key" id="private_key" value='Browse for key'>
+				<input type="submit" value="Upload" name="submit">
+			</form>
+		</div>
+
